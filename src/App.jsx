@@ -7,9 +7,8 @@ import Contact from './components/4-Contact/Contact'
 function App() {
 
   return (
-    <div className='container'>
+    <div id='up' className='container'>
      <Header />
-     <div className='divider' />
      <Hero />
      <div className='divider' />
      <Main />
@@ -17,6 +16,10 @@ function App() {
      <Contact />
      <div className='divider' />
      <Footer />
+
+     <a href='#up'>
+     <button className='scroll2top icon-arrow-right'></button>
+     </a>
     </div>
   )
 }

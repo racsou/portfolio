@@ -3,8 +3,18 @@
 html {
     font-family: "Roboto", sans-serif;
     letter-spacing:0.1px ;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    
 }
 *{
+    margin: 0;
+    padding: 0;
+}
+html {box-sizing: border-box;}
+
+*, *:before, *::after {box-sizing: inherit;} |
+* {
     margin: 0;
     padding: 0;
 }
@@ -16,6 +26,9 @@ html {
     --subtitle: rgb(161 161 170);
     --bgHeader: rgb(39,39,42);
     --blue: rgb(93,188,252);
+    --icon-hover: #d4d4d8;
+    
+    --container-pad: 4.8rem;
 }
 .light {
     --primary: #fff
@@ -30,11 +43,13 @@ body {
     margin-left: auto;
     margin-right: auto;
     background-color: var(--secondary);
+    padding: 0 var(--container-pad);
 }
 .divider {
     border-bottom: 2px solid var(--border);
-    padding-top: 22px;
     margin: 3rem 0;
+    width: calc(100% + var(--container-pad) + var(--container-pad));
+    margin-left:calc(-1 * var(--container-pad));
 }
 li {
     list-style: none;
@@ -64,3 +79,68 @@ button:active {
     scale: 0.85;
     
 }
+.scroll2top {
+    background-color: rgba(25, 118, 210, 0.85);
+    width: 2.65rem;
+    height: 2.65rem;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 2rem;
+    right: 3%;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255,0.2);
+}
+
+.scroll2top:hover {
+    background-color: rgb(25, 118, 210);
+}
+
+@media (max-width: 1000px) {
+    .container {
+        --container-pad: 1.7rem;
+        width: 88%;
+        padding: 0 var(--container-pad);
+    }
+    .divider {
+        width: calc(100% + var(--container-pad) + var(--container-pad));
+        margin-left: calc(-1 * var(--container-pad));
+    }
+}
+@media (max-width: 600px) {
+    .container {
+        width: 98%;
+        padding: 0 var(--container-pad);
+    }
+
+    .scroll2top {
+        opacity: 0.6;
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+    
+}
+
+
+// the below code fragment can be found in:
+
+::-webkit-scrollbar {
+    width: 0.8rem;
+}
+
+::-webkit-scrollbar-track {
+    border: 7px solid #002fff;
+    box-shadow: inset 0 0 2.5px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    background-color: #d4d4d8;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+html {scrollbar-color: #363031 #154f92;}
