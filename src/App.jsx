@@ -3,11 +3,12 @@ import Header from './components/1-Header/Header'
 import Main from './components/3-Main/Main'
 import Footer from './components/5-Footer/Footer'
 import Contact from './components/4-Contact/Contact'
-
+import { Analytics } from "@vercel/analytics/react"
 function App() {
 
   return (
     <div id='up' className='container'>
+      <Analytics/>
      <Header />
      <Hero />
      <div className='divider' />
