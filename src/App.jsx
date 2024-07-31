@@ -4,11 +4,14 @@ import Main from './components/3-Main/Main'
 import Footer from './components/5-Footer/Footer'
 import Contact from './components/4-Contact/Contact'
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 function App() {
 
   return (
     <div id='up' className='container'>
       <Analytics/>
+      <SpeedInsights/>
      <Header />
      <Hero />
      <div className='divider' />
