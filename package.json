@@ -11,6 +11,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@builder.io/dev-tools": "^1.0.19",
+    "@builder.io/react": "^4.0.1",
+    "@builder.io/sdk": "^2.2.6",
     "@vercel/analytics": "^1.3.1",
     "@vercel/postgres": "^0.9.0",
     "@vercel/speed-insights": "^1.0.12",
@@ -18,16 +21,18 @@
     "intellisense": "^0.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sql": "^0.78.0"
+    "react-router-dom": "^6.25.1",
+    "sql": "^0.78.0",
+    "typescript": "^5.5.4"
   },
   "devDependencies": {
-    "@types/react": "^18.2.66",
-    "@types/react-dom": "^18.2.22",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.2.1",
     "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
-    "vite": "^5.2.0"
+    "vite": "^5.3.5"
   }
 }
