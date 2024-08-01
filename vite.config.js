@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [react(), builderDevTools()],
   server: {
     proxy: {
-      '/api': 'http://localhost:5173',
+      '/api': 'https://portfolio-nu-kohl-22.vercel.app',
     },
   },
   build: {
